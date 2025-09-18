@@ -22,6 +22,17 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+/obj
+
+/[Dd]ebug
+/[Dd]ebugPublic
+/[Rr]elease
+/x64
+/x86
+/bld
+/[Bb]in
+/[Oo]bj
+/[Ll]og
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -50,6 +61,7 @@ artifacts/
 # VS Code
 .vscode/
 
+*.dll
 *_i.c
 *_p.c
 *_i.h
@@ -287,3 +299,4 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+

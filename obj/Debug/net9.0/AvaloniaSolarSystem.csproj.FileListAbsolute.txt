@@ -71,3 +71,4 @@ C:\Projects\C#\AvaloniaSolarSystem\obj\Debug\net9.0\refint\AvaloniaSolarSystem.d
 C:\Projects\C#\AvaloniaSolarSystem\obj\Debug\net9.0\AvaloniaSolarSystem.pdb
 C:\Projects\C#\AvaloniaSolarSystem\obj\Debug\net9.0\AvaloniaSolarSystem.genruntimeconfig.cache
 C:\Projects\C#\AvaloniaSolarSystem\obj\Debug\net9.0\ref\AvaloniaSolarSystem.dll
+C:\Projects\C#\AvaloniaSolarSystem\obj\Debug\net9.0\AvaloniaSolarSystem.sourcelink.json
