@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AvaloniaSolarSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6ce132eada8813723dccd5f3a3afe4d6ca5e602")]
 [assembly: System.Reflection.AssemblyProductAttribute("AvaloniaSolarSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AvaloniaSolarSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
