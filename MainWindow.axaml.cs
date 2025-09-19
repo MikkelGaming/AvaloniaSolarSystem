@@ -21,7 +21,7 @@ public partial class MainWindow : Window
         center = new();
 
         DispatcherTimer timer = new DispatcherTimer();
-        timer.Interval = TimeSpan.FromMilliseconds(10);
+        timer.Interval = TimeSpan.FromMilliseconds(1);
 
 
         Planet sun = new(140, 140, 0, new Vector2D(center.X, center.Y), Brushes.Yellow, 0);
