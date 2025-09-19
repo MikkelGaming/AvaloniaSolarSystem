@@ -52,9 +52,12 @@ public class Planet
 
     public virtual void CalcMove()
     {
-        angle += this.Speed;
+        angle += Speed;
 
-        Position = new(Math.Sin(angle) * distance + Position.X, Math.Sin(angle) * distance + Position.Y);
+        newPosition = new(
+            Math.Sin(angle) * distance + Position.X,
+            Math.Cos(angle) * distance + Position.Y
+        );
 
         Console.WriteLine("PlanetMovement thread id: " + Thread.CurrentThread.ManagedThreadId);
     }
@@ -63,8 +66,8 @@ public class Planet
     {
         if (Shape.Parent != null)
         {
-            Canvas.SetTop(Shape, Position.X);
-            Canvas.SetLeft(Shape, Position.Y);
+            Canvas.SetTop(Shape, newPosition.X);
+            Canvas.SetLeft(Shape, newPosition.Y);
         }
     }
 

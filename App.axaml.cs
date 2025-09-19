@@ -1,4 +1,5 @@
 using Avalonia;
+using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 
@@ -11,13 +12,21 @@ public partial class App : Application
         AvaloniaXamlLoader.Load(this);
     }
 
+    static IClassicDesktopStyleApplicationLifetime desktop;
+
     public override void OnFrameworkInitializationCompleted()
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            desktop.MainWindow = new MainWindowMulti();
+            App.desktop = desktop;
+            desktop.MainWindow = new MainMenu();
         }
 
         base.OnFrameworkInitializationCompleted();
+    }
+
+    public static void SetView(Window window)
+    {
+        desktop.MainWindow = window;
     }
 }

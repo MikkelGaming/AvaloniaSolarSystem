@@ -23,7 +23,11 @@ public partial class MainWindowMulti : Window
         InitializeComponent();
 
         SizeChanged += OnSizeChanged;
+        SetupUniverse();
+    }
 
+    private void SetupUniverse()
+    {
         center = new();
 
 
@@ -45,7 +49,6 @@ public partial class MainWindowMulti : Window
         t = new Timer(20);
         t.Elapsed += (s, e) =>
         {
-            Console.WriteLine("Earth?");
             MovePlanet(earth);
         };
         t.AutoReset = true;
@@ -138,6 +141,12 @@ public partial class MainWindowMulti : Window
         mainCanvas.Children.Add(bigOne.Shape);
     }
 
+    private void SetupUniverse(object? sender, EventArgs e)
+    {
+        SetupUniverse();
+    }
+
+
     public void OnSizeChanged(object? a, SizeChangedEventArgs e)
     {
         center = new Vector2D(e.NewSize.Width / 2, e.NewSize.Height / 2);
@@ -151,6 +160,9 @@ public partial class MainWindowMulti : Window
     public void MovePlanet(object state)
     {
         Planet planet = (Planet)state;
+
+        planet.CalcMove();
+
         Task.Run(() => planet.Move());
     }
 }
